@@ -1,0 +1,3168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Scoring Married - CS Used" time="314.795" tests="45" failures="0" errors="0">
+   <testsuite name="Scoring Married - CS Used" tests="45" failures="0" errors="0" time="314.795" skipped="0" timestamp="2022-11-25 11:34:22" hostname="bcafmaster - WPI20220318001.bcaf.co.id" id="Test Suites/Exclude KKB - DS - Married/Scoring Married - CS Used">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\DMS\\Engine Scoring\\Reports\\20221125_113414\\Exclude KKB - DS - Married\\Scoring Married - CS Used\\20221125_113415"/>
+         <property name="logFiles" value="D:\\DMS\\Engine Scoring\\Reports\\20221125_113414\\Exclude KKB - DS - Married\\Scoring Married - CS Used\\20221125_113415\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="bcafmaster - WPI20220318001.bcaf.co.id"/>
+         <property name="hostAddress" value="10.10.8.57"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.2.5.208"/>
+      </properties>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="8.932" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:34:22 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:34:24 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 1
+
+2022-11-25 11:34:24 - [MESSAGE][PASSED] - Variasi data ke : 1
+
+2022-11-25 11:34:24 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:34:26 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\0.har
+
+2022-11-25 11:34:26 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:34:26 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256011","requestid2":"256012"}}
+
+2022-11-25 11:34:26 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256011","requestid2":"256012"}}
+
+2022-11-25 11:34:26 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:34:31 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:34:31 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\1.har
+
+2022-11-25 11:34:31 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:34:31 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 1
+
+2022-11-25 11:34:31 - [MESSAGE][PASSED] - result service data ke : 1
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:31 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:31 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:34:31 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.727" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:34:31 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:34:32 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 2
+
+2022-11-25 11:34:32 - [MESSAGE][PASSED] - Variasi data ke : 2
+
+2022-11-25 11:34:32 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:34:34 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\2.har
+
+2022-11-25 11:34:34 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:34:34 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256013","requestid2":"256014"}}
+
+2022-11-25 11:34:34 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256013","requestid2":"256014"}}
+
+2022-11-25 11:34:34 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:34:39 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:34:39 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\3.har
+
+2022-11-25 11:34:39 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:34:39 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 2
+
+2022-11-25 11:34:39 - [MESSAGE][PASSED] - result service data ke : 2
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:39 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:39 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:34:39 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.829" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:34:39 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:34:40 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 3
+
+2022-11-25 11:34:40 - [MESSAGE][PASSED] - Variasi data ke : 3
+
+2022-11-25 11:34:40 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:34:41 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\4.har
+
+2022-11-25 11:34:41 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:34:41 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256015","requestid2":"256016"}}
+
+2022-11-25 11:34:41 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256015","requestid2":"256016"}}
+
+2022-11-25 11:34:41 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:34:46 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:34:46 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\5.har
+
+2022-11-25 11:34:46 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:34:46 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 3
+
+2022-11-25 11:34:46 - [MESSAGE][PASSED] - result service data ke : 3
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:46 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:46 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:34:46 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.238" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:34:46 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:34:47 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 4
+
+2022-11-25 11:34:47 - [MESSAGE][PASSED] - Variasi data ke : 4
+
+2022-11-25 11:34:47 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:34:48 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\6.har
+
+2022-11-25 11:34:48 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:34:48 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256017","requestid2":"256018"}}
+
+2022-11-25 11:34:48 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256017","requestid2":"256018"}}
+
+2022-11-25 11:34:48 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:34:53 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:34:53 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\7.har
+
+2022-11-25 11:34:53 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:34:53 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 4
+
+2022-11-25 11:34:53 - [MESSAGE][PASSED] - result service data ke : 4
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:53 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:34:53 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:34:53 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.336" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:34:53 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:34:54 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 5
+
+2022-11-25 11:34:54 - [MESSAGE][PASSED] - Variasi data ke : 5
+
+2022-11-25 11:34:54 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:34:55 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\8.har
+
+2022-11-25 11:34:55 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:34:55 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256019","requestid2":"256020"}}
+
+2022-11-25 11:34:55 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256019","requestid2":"256020"}}
+
+2022-11-25 11:34:55 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:00 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:00 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\9.har
+
+2022-11-25 11:35:00 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:00 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 5
+
+2022-11-25 11:35:00 - [MESSAGE][PASSED] - result service data ke : 5
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:00 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:00 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:00 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.972" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:01 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:01 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 6
+
+2022-11-25 11:35:01 - [MESSAGE][PASSED] - Variasi data ke : 6
+
+2022-11-25 11:35:01 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:02 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\10.har
+
+2022-11-25 11:35:02 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:02 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256021","requestid2":"256022"}}
+
+2022-11-25 11:35:02 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256021","requestid2":"256022"}}
+
+2022-11-25 11:35:02 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:07 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:07 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:09 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\11.har
+
+2022-11-25 11:35:09 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:09 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 6
+
+2022-11-25 11:35:09 - [MESSAGE][PASSED] - result service data ke : 6
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:09 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:09 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.447" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:09 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 7
+
+2022-11-25 11:35:09 - [MESSAGE][PASSED] - Variasi data ke : 7
+
+2022-11-25 11:35:09 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:10 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\12.har
+
+2022-11-25 11:35:10 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:10 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256023","requestid2":"256024"}}
+
+2022-11-25 11:35:10 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256023","requestid2":"256024"}}
+
+2022-11-25 11:35:10 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:15 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:15 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:16 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\13.har
+
+2022-11-25 11:35:16 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:16 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:16 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 7
+
+2022-11-25 11:35:16 - [MESSAGE][PASSED] - result service data ke : 7
+
+2022-11-25 11:35:16 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:16 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.761" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:16 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:17 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 8
+
+2022-11-25 11:35:17 - [MESSAGE][PASSED] - Variasi data ke : 8
+
+2022-11-25 11:35:17 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:19 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\14.har
+
+2022-11-25 11:35:19 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:19 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256025","requestid2":"256026"}}
+
+2022-11-25 11:35:19 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256025","requestid2":"256026"}}
+
+2022-11-25 11:35:19 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:24 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:24 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\15.har
+
+2022-11-25 11:35:24 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 8
+
+2022-11-25 11:35:24 - [MESSAGE][PASSED] - result service data ke : 8
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:24 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:24 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:24 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="8.53" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:24 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:25 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 9
+
+2022-11-25 11:35:25 - [MESSAGE][PASSED] - Variasi data ke : 9
+
+2022-11-25 11:35:25 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:26 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\16.har
+
+2022-11-25 11:35:26 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:26 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256027","requestid2":"256028"}}
+
+2022-11-25 11:35:26 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256027","requestid2":"256028"}}
+
+2022-11-25 11:35:26 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:31 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:31 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:32 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\17.har
+
+2022-11-25 11:35:32 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:32 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:32 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:32 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:32 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 9
+
+2022-11-25 11:35:32 - [MESSAGE][PASSED] - result service data ke : 9
+
+2022-11-25 11:35:32 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:32 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reguler","Final_result":"Reguler","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:32 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:32 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="8.077" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:32 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:33 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 10
+
+2022-11-25 11:35:33 - [MESSAGE][PASSED] - Variasi data ke : 10
+
+2022-11-25 11:35:33 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:35 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\18.har
+
+2022-11-25 11:35:35 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:35 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256029","requestid2":"256030"}}
+
+2022-11-25 11:35:35 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256029","requestid2":"256030"}}
+
+2022-11-25 11:35:35 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:40 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:40 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:41 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\19.har
+
+2022-11-25 11:35:41 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:41 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 10
+
+2022-11-25 11:35:41 - [MESSAGE][PASSED] - result service data ke : 10
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:41 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:41 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.715" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:41 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 11
+
+2022-11-25 11:35:41 - [MESSAGE][PASSED] - Variasi data ke : 11
+
+2022-11-25 11:35:41 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:43 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\20.har
+
+2022-11-25 11:35:43 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:43 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256031","requestid2":"256032"}}
+
+2022-11-25 11:35:43 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256031","requestid2":"256032"}}
+
+2022-11-25 11:35:43 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:48 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:48 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\21.har
+
+2022-11-25 11:35:48 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:48 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 11
+
+2022-11-25 11:35:48 - [MESSAGE][PASSED] - result service data ke : 11
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:48 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:48 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:48 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.335" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:48 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:49 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 12
+
+2022-11-25 11:35:49 - [MESSAGE][PASSED] - Variasi data ke : 12
+
+2022-11-25 11:35:49 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:50 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\22.har
+
+2022-11-25 11:35:50 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:50 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256033","requestid2":"256034"}}
+
+2022-11-25 11:35:50 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256033","requestid2":"256034"}}
+
+2022-11-25 11:35:50 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:35:55 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:35:55 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:35:56 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\23.har
+
+2022-11-25 11:35:56 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:35:56 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 12
+
+2022-11-25 11:35:56 - [MESSAGE][PASSED] - result service data ke : 12
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:56 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:35:56 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.144" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:35:56 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 13
+
+2022-11-25 11:35:56 - [MESSAGE][PASSED] - Variasi data ke : 13
+
+2022-11-25 11:35:56 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:35:57 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\24.har
+
+2022-11-25 11:35:57 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:35:57 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256035","requestid2":"256036"}}
+
+2022-11-25 11:35:57 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256035","requestid2":"256036"}}
+
+2022-11-25 11:35:57 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:02 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:02 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:03 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\25.har
+
+2022-11-25 11:36:03 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:03 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:03 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:03 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:03 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 13
+
+2022-11-25 11:36:03 - [MESSAGE][PASSED] - result service data ke : 13
+
+2022-11-25 11:36:03 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:03 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:03 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:03 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.82" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:03 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:04 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 14
+
+2022-11-25 11:36:04 - [MESSAGE][PASSED] - Variasi data ke : 14
+
+2022-11-25 11:36:04 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:05 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\26.har
+
+2022-11-25 11:36:05 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:05 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256037","requestid2":"256038"}}
+
+2022-11-25 11:36:05 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256037","requestid2":"256038"}}
+
+2022-11-25 11:36:05 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:10 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:10 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\27.har
+
+2022-11-25 11:36:10 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:10 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 14
+
+2022-11-25 11:36:10 - [MESSAGE][PASSED] - result service data ke : 14
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:10 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:10 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:10 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.608" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:10 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 15
+
+2022-11-25 11:36:11 - [MESSAGE][PASSED] - Variasi data ke : 15
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:11 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\28.har
+
+2022-11-25 11:36:11 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:11 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256039","requestid2":"256040"}}
+
+2022-11-25 11:36:11 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256039","requestid2":"256040"}}
+
+2022-11-25 11:36:11 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:16 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:16 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\29.har
+
+2022-11-25 11:36:16 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 15
+
+2022-11-25 11:36:16 - [MESSAGE][PASSED] - result service data ke : 15
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:16 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.586" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:17 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:17 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 16
+
+2022-11-25 11:36:17 - [MESSAGE][PASSED] - Variasi data ke : 16
+
+2022-11-25 11:36:17 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:18 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\30.har
+
+2022-11-25 11:36:18 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:18 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256041","requestid2":"256042"}}
+
+2022-11-25 11:36:18 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256041","requestid2":"256042"}}
+
+2022-11-25 11:36:18 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:23 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:23 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\31.har
+
+2022-11-25 11:36:23 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 16
+
+2022-11-25 11:36:23 - [MESSAGE][PASSED] - result service data ke : 16
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:23 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:23 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.59" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:23 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:24 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 17
+
+2022-11-25 11:36:24 - [MESSAGE][PASSED] - Variasi data ke : 17
+
+2022-11-25 11:36:24 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:25 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\32.har
+
+2022-11-25 11:36:25 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:25 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256043","requestid2":"256044"}}
+
+2022-11-25 11:36:25 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256043","requestid2":"256044"}}
+
+2022-11-25 11:36:25 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:30 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\33.har
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 17
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - result service data ke : 17
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:30 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.532" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:30 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 18
+
+2022-11-25 11:36:30 - [MESSAGE][PASSED] - Variasi data ke : 18
+
+2022-11-25 11:36:30 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:31 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\34.har
+
+2022-11-25 11:36:31 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:31 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256045","requestid2":"256046"}}
+
+2022-11-25 11:36:31 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256045","requestid2":"256046"}}
+
+2022-11-25 11:36:31 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:36 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:36 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\35.har
+
+2022-11-25 11:36:36 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 18
+
+2022-11-25 11:36:36 - [MESSAGE][PASSED] - result service data ke : 18
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:36 - [MESSAGE][INFO] - {"result_konsumen":"Reguler","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:36 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:36 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.578" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:36 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:37 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 19
+
+2022-11-25 11:36:37 - [MESSAGE][PASSED] - Variasi data ke : 19
+
+2022-11-25 11:36:37 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:38 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\36.har
+
+2022-11-25 11:36:38 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:38 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256047","requestid2":"256048"}}
+
+2022-11-25 11:36:38 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256047","requestid2":"256048"}}
+
+2022-11-25 11:36:38 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:43 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:43 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\37.har
+
+2022-11-25 11:36:43 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:43 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 19
+
+2022-11-25 11:36:43 - [MESSAGE][PASSED] - result service data ke : 19
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:43 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:43 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:43 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.502" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:43 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 20
+
+2022-11-25 11:36:44 - [MESSAGE][PASSED] - Variasi data ke : 20
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:44 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\38.har
+
+2022-11-25 11:36:44 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:44 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256049","requestid2":"256050"}}
+
+2022-11-25 11:36:44 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256049","requestid2":"256050"}}
+
+2022-11-25 11:36:44 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:49 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:49 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\39.har
+
+2022-11-25 11:36:49 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:49 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 20
+
+2022-11-25 11:36:49 - [MESSAGE][PASSED] - result service data ke : 20
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:49 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:49 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:50 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.594" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:50 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:50 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 21
+
+2022-11-25 11:36:50 - [MESSAGE][PASSED] - Variasi data ke : 21
+
+2022-11-25 11:36:50 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:51 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\40.har
+
+2022-11-25 11:36:51 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256051","requestid2":"256052"}}
+
+2022-11-25 11:36:51 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256051","requestid2":"256052"}}
+
+2022-11-25 11:36:51 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:36:56 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:36:56 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\41.har
+
+2022-11-25 11:36:56 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:36:56 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 21
+
+2022-11-25 11:36:56 - [MESSAGE][PASSED] - result service data ke : 21
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:56 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:36:56 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:36:56 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.815" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:36:56 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:36:57 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 22
+
+2022-11-25 11:36:57 - [MESSAGE][PASSED] - Variasi data ke : 22
+
+2022-11-25 11:36:57 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:36:58 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\42.har
+
+2022-11-25 11:36:58 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:36:58 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256053","requestid2":"256054"}}
+
+2022-11-25 11:36:58 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256053","requestid2":"256054"}}
+
+2022-11-25 11:36:58 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:03 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:03 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\43.har
+
+2022-11-25 11:37:03 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:03 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 22
+
+2022-11-25 11:37:03 - [MESSAGE][PASSED] - result service data ke : 22
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:03 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:03 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:03 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.503" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:03 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 23
+
+2022-11-25 11:37:04 - [MESSAGE][PASSED] - Variasi data ke : 23
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:04 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\44.har
+
+2022-11-25 11:37:04 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:04 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256055","requestid2":"256056"}}
+
+2022-11-25 11:37:04 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256055","requestid2":"256056"}}
+
+2022-11-25 11:37:04 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:09 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:09 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:10 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\45.har
+
+2022-11-25 11:37:10 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:10 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 23
+
+2022-11-25 11:37:10 - [MESSAGE][PASSED] - result service data ke : 23
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:10 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:10 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.57" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:10 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 24
+
+2022-11-25 11:37:10 - [MESSAGE][PASSED] - Variasi data ke : 24
+
+2022-11-25 11:37:10 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:11 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\46.har
+
+2022-11-25 11:37:11 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:11 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256057","requestid2":"256058"}}
+
+2022-11-25 11:37:11 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256057","requestid2":"256058"}}
+
+2022-11-25 11:37:11 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:16 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:16 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\47.har
+
+2022-11-25 11:37:16 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 24
+
+2022-11-25 11:37:16 - [MESSAGE][PASSED] - result service data ke : 24
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:16 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.531" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:16 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:17 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 25
+
+2022-11-25 11:37:17 - [MESSAGE][PASSED] - Variasi data ke : 25
+
+2022-11-25 11:37:17 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:18 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\48.har
+
+2022-11-25 11:37:18 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:18 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256059","requestid2":"256060"}}
+
+2022-11-25 11:37:18 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256059","requestid2":"256060"}}
+
+2022-11-25 11:37:18 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:23 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:23 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\49.har
+
+2022-11-25 11:37:23 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 25
+
+2022-11-25 11:37:23 - [MESSAGE][PASSED] - result service data ke : 25
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:23 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:23 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.577" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:23 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 26
+
+2022-11-25 11:37:24 - [MESSAGE][PASSED] - Variasi data ke : 26
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:24 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\50.har
+
+2022-11-25 11:37:24 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256061","requestid2":"256062"}}
+
+2022-11-25 11:37:24 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256061","requestid2":"256062"}}
+
+2022-11-25 11:37:24 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:29 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:29 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\51.har
+
+2022-11-25 11:37:29 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:29 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 26
+
+2022-11-25 11:37:29 - [MESSAGE][PASSED] - result service data ke : 26
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:29 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:29 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:29 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.514" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:29 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:30 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 27
+
+2022-11-25 11:37:30 - [MESSAGE][PASSED] - Variasi data ke : 27
+
+2022-11-25 11:37:30 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:31 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\52.har
+
+2022-11-25 11:37:31 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:31 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256063","requestid2":"256064"}}
+
+2022-11-25 11:37:31 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256063","requestid2":"256064"}}
+
+2022-11-25 11:37:31 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:36 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:36 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\53.har
+
+2022-11-25 11:37:36 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 27
+
+2022-11-25 11:37:36 - [MESSAGE][PASSED] - result service data ke : 27
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:36 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:36 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:36 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.617" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:36 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:37 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 28
+
+2022-11-25 11:37:37 - [MESSAGE][PASSED] - Variasi data ke : 28
+
+2022-11-25 11:37:37 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:38 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\54.har
+
+2022-11-25 11:37:38 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:38 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256065","requestid2":"256066"}}
+
+2022-11-25 11:37:38 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256065","requestid2":"256066"}}
+
+2022-11-25 11:37:38 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:43 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\55.har
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 28
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - result service data ke : 28
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:43 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.576" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:43 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 29
+
+2022-11-25 11:37:43 - [MESSAGE][PASSED] - Variasi data ke : 29
+
+2022-11-25 11:37:43 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:44 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\56.har
+
+2022-11-25 11:37:44 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:44 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256067","requestid2":"256068"}}
+
+2022-11-25 11:37:44 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256067","requestid2":"256068"}}
+
+2022-11-25 11:37:44 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:49 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:49 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\57.har
+
+2022-11-25 11:37:49 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:49 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 29
+
+2022-11-25 11:37:49 - [MESSAGE][PASSED] - result service data ke : 29
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:49 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:49 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:49 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.55" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:49 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:50 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 30
+
+2022-11-25 11:37:50 - [MESSAGE][PASSED] - Variasi data ke : 30
+
+2022-11-25 11:37:50 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:51 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\58.har
+
+2022-11-25 11:37:51 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256069","requestid2":"256070"}}
+
+2022-11-25 11:37:51 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256069","requestid2":"256070"}}
+
+2022-11-25 11:37:51 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:37:56 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:37:56 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\59.har
+
+2022-11-25 11:37:56 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:37:56 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 30
+
+2022-11-25 11:37:56 - [MESSAGE][PASSED] - result service data ke : 30
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:56 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:37:56 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:37:56 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.547" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:37:56 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 31
+
+2022-11-25 11:37:57 - [MESSAGE][PASSED] - Variasi data ke : 31
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:37:57 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\60.har
+
+2022-11-25 11:37:57 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:37:57 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256071","requestid2":"256072"}}
+
+2022-11-25 11:37:57 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256071","requestid2":"256072"}}
+
+2022-11-25 11:37:57 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:02 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:02 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\61.har
+
+2022-11-25 11:38:02 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:02 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 31
+
+2022-11-25 11:38:02 - [MESSAGE][PASSED] - result service data ke : 31
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:02 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:02 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:02 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.564" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:03 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:03 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 32
+
+2022-11-25 11:38:03 - [MESSAGE][PASSED] - Variasi data ke : 32
+
+2022-11-25 11:38:03 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:04 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\62.har
+
+2022-11-25 11:38:04 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:04 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256073","requestid2":"256074"}}
+
+2022-11-25 11:38:04 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256073","requestid2":"256074"}}
+
+2022-11-25 11:38:04 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:09 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:09 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\63.har
+
+2022-11-25 11:38:09 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:09 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 32
+
+2022-11-25 11:38:09 - [MESSAGE][PASSED] - result service data ke : 32
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:09 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:09 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:09 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.66" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:09 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:10 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 33
+
+2022-11-25 11:38:10 - [MESSAGE][PASSED] - Variasi data ke : 33
+
+2022-11-25 11:38:10 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:11 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\64.har
+
+2022-11-25 11:38:11 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:11 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256075","requestid2":"256076"}}
+
+2022-11-25 11:38:11 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256075","requestid2":"256076"}}
+
+2022-11-25 11:38:11 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:16 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:16 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\65.har
+
+2022-11-25 11:38:16 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 33
+
+2022-11-25 11:38:16 - [MESSAGE][PASSED] - result service data ke : 33
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:16 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.551" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:16 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 34
+
+2022-11-25 11:38:17 - [MESSAGE][PASSED] - Variasi data ke : 34
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:17 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\66.har
+
+2022-11-25 11:38:17 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:17 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256077","requestid2":"256078"}}
+
+2022-11-25 11:38:17 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256077","requestid2":"256078"}}
+
+2022-11-25 11:38:17 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:22 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:22 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\67.har
+
+2022-11-25 11:38:22 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 34
+
+2022-11-25 11:38:22 - [MESSAGE][PASSED] - result service data ke : 34
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:22 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:22 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:22 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.577" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:22 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:23 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 35
+
+2022-11-25 11:38:23 - [MESSAGE][PASSED] - Variasi data ke : 35
+
+2022-11-25 11:38:23 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:24 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\68.har
+
+2022-11-25 11:38:24 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256079","requestid2":"256080"}}
+
+2022-11-25 11:38:24 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256079","requestid2":"256080"}}
+
+2022-11-25 11:38:24 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:29 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:29 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\69.har
+
+2022-11-25 11:38:29 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:29 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 35
+
+2022-11-25 11:38:29 - [MESSAGE][PASSED] - result service data ke : 35
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:29 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:29 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:29 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.609" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:29 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:30 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 36
+
+2022-11-25 11:38:30 - [MESSAGE][PASSED] - Variasi data ke : 36
+
+2022-11-25 11:38:30 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:31 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\70.har
+
+2022-11-25 11:38:31 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:31 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256081","requestid2":"256082"}}
+
+2022-11-25 11:38:31 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256081","requestid2":"256082"}}
+
+2022-11-25 11:38:31 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:36 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\71.har
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 36
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - result service data ke : 36
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:36 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.551" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:36 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 37
+
+2022-11-25 11:38:36 - [MESSAGE][PASSED] - Variasi data ke : 37
+
+2022-11-25 11:38:36 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:37 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\72.har
+
+2022-11-25 11:38:37 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256083","requestid2":"256084"}}
+
+2022-11-25 11:38:37 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256083","requestid2":"256084"}}
+
+2022-11-25 11:38:37 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:42 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:42 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\73.har
+
+2022-11-25 11:38:42 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:42 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 37
+
+2022-11-25 11:38:42 - [MESSAGE][PASSED] - result service data ke : 37
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:42 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:42 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:42 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.566" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:42 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:43 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 38
+
+2022-11-25 11:38:43 - [MESSAGE][PASSED] - Variasi data ke : 38
+
+2022-11-25 11:38:43 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:44 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\74.har
+
+2022-11-25 11:38:44 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:44 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256085","requestid2":"256086"}}
+
+2022-11-25 11:38:44 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256085","requestid2":"256086"}}
+
+2022-11-25 11:38:44 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:49 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:49 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\75.har
+
+2022-11-25 11:38:49 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:49 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 38
+
+2022-11-25 11:38:49 - [MESSAGE][PASSED] - result service data ke : 38
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:49 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:49 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:49 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.638" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:49 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 39
+
+2022-11-25 11:38:50 - [MESSAGE][PASSED] - Variasi data ke : 39
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:50 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\76.har
+
+2022-11-25 11:38:50 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:50 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256087","requestid2":"256088"}}
+
+2022-11-25 11:38:50 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256087","requestid2":"256088"}}
+
+2022-11-25 11:38:50 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:38:55 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:38:55 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:38:56 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\77.har
+
+2022-11-25 11:38:56 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:38:56 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 39
+
+2022-11-25 11:38:56 - [MESSAGE][PASSED] - result service data ke : 39
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:56 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:38:56 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.655" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:38:56 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 40
+
+2022-11-25 11:38:56 - [MESSAGE][PASSED] - Variasi data ke : 40
+
+2022-11-25 11:38:56 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:38:57 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\78.har
+
+2022-11-25 11:38:57 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:38:57 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256089","requestid2":"256090"}}
+
+2022-11-25 11:38:57 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256089","requestid2":"256090"}}
+
+2022-11-25 11:38:57 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:02 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:02 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\79.har
+
+2022-11-25 11:39:02 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:02 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 40
+
+2022-11-25 11:39:02 - [MESSAGE][PASSED] - result service data ke : 40
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:02 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:02 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:02 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.595" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:39:02 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:39:03 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 41
+
+2022-11-25 11:39:03 - [MESSAGE][PASSED] - Variasi data ke : 41
+
+2022-11-25 11:39:03 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:39:04 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\80.har
+
+2022-11-25 11:39:04 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:39:04 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256091","requestid2":"256092"}}
+
+2022-11-25 11:39:04 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256091","requestid2":"256092"}}
+
+2022-11-25 11:39:04 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:09 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:09 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\81.har
+
+2022-11-25 11:39:09 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:09 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 41
+
+2022-11-25 11:39:09 - [MESSAGE][PASSED] - result service data ke : 41
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:09 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:09 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:09 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.565" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:39:09 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 42
+
+2022-11-25 11:39:10 - [MESSAGE][PASSED] - Variasi data ke : 42
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:39:10 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\82.har
+
+2022-11-25 11:39:10 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:39:10 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256093","requestid2":"256094"}}
+
+2022-11-25 11:39:10 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256093","requestid2":"256094"}}
+
+2022-11-25 11:39:10 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:15 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:15 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:16 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\83.har
+
+2022-11-25 11:39:16 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:16 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 42
+
+2022-11-25 11:39:16 - [MESSAGE][PASSED] - result service data ke : 42
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:16 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="7.609" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:39:16 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 43
+
+2022-11-25 11:39:16 - [MESSAGE][PASSED] - Variasi data ke : 43
+
+2022-11-25 11:39:16 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:39:17 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\84.har
+
+2022-11-25 11:39:17 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:39:17 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256095","requestid2":"256096"}}
+
+2022-11-25 11:39:17 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256095","requestid2":"256096"}}
+
+2022-11-25 11:39:17 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:22 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:22 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:23 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\85.har
+
+2022-11-25 11:39:23 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:23 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:23 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 43
+
+2022-11-25 11:39:23 - [MESSAGE][PASSED] - result service data ke : 43
+
+2022-11-25 11:39:23 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:23 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:23 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.752" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:39:23 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:39:24 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 44
+
+2022-11-25 11:39:24 - [MESSAGE][PASSED] - Variasi data ke : 44
+
+2022-11-25 11:39:24 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:39:25 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\86.har
+
+2022-11-25 11:39:25 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:39:25 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256097","requestid2":"256098"}}
+
+2022-11-25 11:39:25 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256097","requestid2":"256098"}}
+
+2022-11-25 11:39:25 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:30 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:30 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\87.har
+
+2022-11-25 11:39:30 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:30 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 44
+
+2022-11-25 11:39:30 - [MESSAGE][PASSED] - result service data ke : 44
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:30 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:30 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:30 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.582" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 11:39:30 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 11:39:31 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 45
+
+2022-11-25 11:39:31 - [MESSAGE][PASSED] - Variasi data ke : 45
+
+2022-11-25 11:39:31 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 11:39:32 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\88.har
+
+2022-11-25 11:39:32 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 11:39:32 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"256099","requestid2":"256100"}}
+
+2022-11-25 11:39:32 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"256099","requestid2":"256100"}}
+
+2022-11-25 11:39:32 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 11:39:37 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 11:39:37 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_113414\Exclude KKB - DS - Married\Scoring Married - CS Used\20221125_113415\requests\main\89.har
+
+2022-11-25 11:39:37 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 11:39:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 45
+
+2022-11-25 11:39:37 - [MESSAGE][PASSED] - result service data ke : 45
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:37 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Approve","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 11:39:37 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 11:39:37 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-11-25 11:34:22 - [TEST_SUITE][PASSED] - Scoring Married - CS Used: Test Cases/Engine_Scoring/Engine Scoring]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

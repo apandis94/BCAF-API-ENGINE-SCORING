@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Scoring Married - CS New" time="16.342" tests="2" failures="1" errors="0">
+   <testsuite name="Scoring Married - CS New" tests="2" failures="1" errors="0" time="16.342" skipped="0" timestamp="2022-11-25 10:40:25" hostname="bcafmaster - WPI20220318001.bcaf.co.id" id="Test Suites/Exclude KKB - DS - Married/Scoring Married - CS New">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\DMS\\Engine Scoring\\Reports\\20221125_104018\\Exclude KKB - DS - Married\\Scoring Married - CS New\\20221125_104019"/>
+         <property name="logFiles" value="D:\\DMS\\Engine Scoring\\Reports\\20221125_104018\\Exclude KKB - DS - Married\\Scoring Married - CS New\\20221125_104019\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="bcafmaster - WPI20220318001.bcaf.co.id"/>
+         <property name="hostAddress" value="10.10.8.57"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.2.5.208"/>
+      </properties>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="9.141" classname="Test Cases/Engine_Scoring/Engine Scoring" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Engine_Scoring/Engine Scoring FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)
+"/>
+         <system-out><![CDATA[2022-11-25 10:40:25 - [TEST_CASE][FAILED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)
+
+
+2022-11-25 10:40:26 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 79
+
+2022-11-25 10:40:26 - [MESSAGE][PASSED] - Variasi data ke : 79
+
+2022-11-25 10:40:26 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 10:40:28 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_104018\Exclude KKB - DS - Married\Scoring Married - CS New\20221125_104019\requests\main\0.har
+
+2022-11-25 10:40:28 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 10:40:28 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"255709","requestid2":"255710"}}
+
+2022-11-25 10:40:28 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"255709","requestid2":"255710"}}
+
+2022-11-25 10:40:28 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 10:40:33 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 10:40:33 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 10:40:34 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_104018\Exclude KKB - DS - Married\Scoring Married - CS New\20221125_104019\requests\main\1.har
+
+2022-11-25 10:40:34 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 10:40:34 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 10:40:34 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 10:40:34 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 10:40:34 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 79
+
+2022-11-25 10:40:34 - [MESSAGE][PASSED] - result service data ke : 79
+
+2022-11-25 10:40:34 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 10:40:34 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reject","Final_result":"Reject","errorMessage":"","status":"Done"}
+
+2022-11-25 10:40:34 - [TEST_STEP][FAILED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Unable to verify element property value (Root cause: com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)
+)
+
+2022-11-25 10:40:34 - [MESSAGE][FAILED] - Expected element property value 'Approve' is not equal with actual property value 'Reject'
+
+2022-11-25 10:40:34 - [MESSAGE][FAILED] - Unable to verify element property value (Root cause: com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)
+)]]></system-out>
+         <system-err><![CDATA[2022-11-25 10:40:25 - [TEST_CASE][FAILED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Engine_Scoring/Engine Scoring" time="6.854" classname="Test Cases/Engine_Scoring/Engine Scoring" status="PASSED">
+         <system-out><![CDATA[2022-11-25 10:40:34 - [TEST_CASE][PASSED] - Test Cases/Engine_Scoring/Engine Scoring: Test Cases/Engine_Scoring/Engine Scoring
+
+2022-11-25 10:40:35 - [TEST_STEP][PASSED] - markPassed("Variasi data ke : " + no): Variasi data ke : 80
+
+2022-11-25 10:40:35 - [MESSAGE][PASSED] - Variasi data ke : 80
+
+2022-11-25 10:40:35 - [TEST_STEP][PASSED] - req_data = sendRequest(findTestObject("Search_ME", ["MID":MID, "source":source, "ip":ip, "userid":userid, "branch":branch, "tipekons":tipekons, "marital":marital, "penjamin":penjamin, ... ])): Send request successfully
+
+2022-11-25 10:40:36 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_104018\Exclude KKB - DS - Married\Scoring Married - CS New\20221125_104019\requests\main\2.har
+
+2022-11-25 10:40:36 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - result = slurper.parseText(req_data.getResponseBodyContent()): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - reqid_kons = requestid1: null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - reqid_spouse = requestid2: null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - println("requestid kons : " + reqid_kons): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - response_searchME_kons = reqid_kons: null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - response_searchME_spouse = reqid_spouse: null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - println("kons req id is :" + response_searchME_kons): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - println("spouse req id is : " + response_searchME_spouse): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(req_data, 200): Verify response status code successfully
+
+2022-11-25 10:40:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - response = req_data.getResponseText(): null
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - logInfo($response): {"status":"Done","data":{"requestid1":"255711","requestid2":"255712"}}
+
+2022-11-25 10:40:36 - [MESSAGE][INFO] - {"status":"Done","data":{"requestid1":"255711","requestid2":"255712"}}
+
+2022-11-25 10:40:36 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+2022-11-25 10:40:41 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - scoring = sendRequest(findTestObject("EngineScore", ["response_searchME_kons":response_searchME_kons, "response_searchME_spouse":response_searchME_spouse])): Send request successfully
+
+2022-11-25 10:40:41 - [MESSAGE][INFO] - HAR: D:\DMS\Engine Scoring\Reports\20221125_104018\Exclude KKB - DS - Married\Scoring Married - CS New\20221125_104019\requests\main\3.har
+
+2022-11-25 10:40:41 - [MESSAGE][PASSED] - Send request successfully
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - verifyResponseStatusCode(scoring, 200): Verify response status code successfully
+
+2022-11-25 10:40:41 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - response2 = scoring.getResponseText(): null
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - markPassed("result service data ke : " + no): result service data ke : 80
+
+2022-11-25 10:40:41 - [MESSAGE][PASSED] - result service data ke : 80
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - logInfo($response2): {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 10:40:41 - [MESSAGE][INFO] - {"result_konsumen":"Approve","result_pasangan":"Reguler","Final_result":"Approve","errorMessage":"","status":"Done"}
+
+2022-11-25 10:40:41 - [TEST_STEP][PASSED] - verifyElementPropertyValue(scoring, "Final_result", final_result): Verify element property value successfully
+
+2022-11-25 10:40:41 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2022-11-25 10:40:25 - [TEST_SUITE][FAILED] - Scoring Married - CS New: Test Cases/Engine_Scoring/Engine Scoring FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)]]></system-out>
+      <system-err><![CDATA[2022-11-25 10:40:25 - [TEST_SUITE][FAILED] - Scoring Married - CS New: Test Cases/Engine_Scoring/Engine Scoring FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected element property value 'Approve' is not equal with actual property value 'Reject'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:50)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.doCall(VerifyElementPropertyValueKeyword.groovy:56)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword$_verifyElementPropertyValue_closure1.call(VerifyElementPropertyValueKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.verifyElementPropertyValue(VerifyElementPropertyValueKeyword.groovy:48)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyElementPropertyValueKeyword.execute(VerifyElementPropertyValueKeyword.groovy:43)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyElementPropertyValue(WSBuiltInKeywords.groovy:189)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyElementPropertyValue$1.call(Unknown Source)
+	at Engine Scoring.run(Engine Scoring:107)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:442)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:433)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:412)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:404)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:281)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:202)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:164)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:105)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:185)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1669347619745.run(TempTestSuite1669347619745.groovy:36)]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,1313 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Scoring Married - KKB,,,,2022-11-28 16:58:55,2022-11-28 17:05:21,6m - 26.287s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:58:55,2022-11-28 16:59:03,8.137s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:58:57,2022-11-28 16:58:57,0.013s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:58:57,2022-11-28 16:58:58,1.592s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.005s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.014s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.001s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.001s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:58:58,2022-11-28 16:58:58,0.020s,PASSED
+delay(5),,,,2022-11-28 16:58:58,2022-11-28 16:59:03,5.019s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.106s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:03,2022-11-28 16:59:03,0.019s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:03,2022-11-28 16:59:10,6.960s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.799s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.001s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:05,2022-11-28 16:59:05,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:05,2022-11-28 16:59:10,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.095s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:10,2022-11-28 16:59:10,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:11,2022-11-28 16:59:17,6.814s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:11,2022-11-28 16:59:11,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:11,2022-11-28 16:59:12,0.947s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.002s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:12,2022-11-28 16:59:12,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:12,2022-11-28 16:59:17,5.012s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.110s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:17,2022-11-28 16:59:17,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:17,2022-11-28 16:59:24,6.570s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:18,2022-11-28 16:59:18,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:18,2022-11-28 16:59:19,0.750s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:19,2022-11-28 16:59:19,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:19,2022-11-28 16:59:24,5.003s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:24,2022-11-28 16:59:24,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:24,2022-11-28 16:59:31,6.769s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.724s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:25,2022-11-28 16:59:25,0.015s,PASSED
+delay(5),,,,2022-11-28 16:59:25,2022-11-28 16:59:30,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:30,2022-11-28 16:59:31,0.324s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:31,2022-11-28 16:59:31,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:31,2022-11-28 16:59:31,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:31,2022-11-28 16:59:31,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:31,2022-11-28 16:59:31,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:31,2022-11-28 16:59:31,0.019s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:31,2022-11-28 16:59:37,6.617s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.781s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:32,2022-11-28 16:59:32,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:32,2022-11-28 16:59:37,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.093s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:37,2022-11-28 16:59:37,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:38,2022-11-28 16:59:44,6.663s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:38,2022-11-28 16:59:38,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:38,2022-11-28 16:59:39,0.834s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:39,2022-11-28 16:59:39,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:39,2022-11-28 16:59:44,5.004s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:44,2022-11-28 16:59:44,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:44,2022-11-28 16:59:51,6.496s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:45,2022-11-28 16:59:45,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:45,2022-11-28 16:59:46,0.695s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:46,2022-11-28 16:59:46,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:46,2022-11-28 16:59:51,5.001s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:51,2022-11-28 16:59:51,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:51,2022-11-28 16:59:58,6.691s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.798s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+logInfo($response),,,,2022-11-28 16:59:52,2022-11-28 16:59:52,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:52,2022-11-28 16:59:57,5.013s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 16:59:57,2022-11-28 16:59:57,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 16:59:57,2022-11-28 16:59:57,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:57,2022-11-28 16:59:57,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 16:59:57,2022-11-28 16:59:57,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 16:59:57,2022-11-28 16:59:57,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 16:59:57,2022-11-28 16:59:58,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 16:59:58,2022-11-28 17:00:04,6.558s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 16:59:58,2022-11-28 16:59:58,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 16:59:58,2022-11-28 16:59:59,0.757s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.001s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.001s,PASSED
+logInfo($response),,,,2022-11-28 16:59:59,2022-11-28 16:59:59,0.000s,PASSED
+delay(5),,,,2022-11-28 16:59:59,2022-11-28 17:00:04,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:04,2022-11-28 17:00:04,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:04,2022-11-28 17:00:11,6.697s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:05,2022-11-28 17:00:05,0.015s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:05,2022-11-28 17:00:06,0.681s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:06,2022-11-28 17:00:06,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:06,2022-11-28 17:00:11,5.005s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.264s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:11,2022-11-28 17:00:11,0.013s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:12,2022-11-28 17:00:18,6.493s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:12,2022-11-28 17:00:12,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:12,2022-11-28 17:00:13,0.703s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.001s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:13,2022-11-28 17:00:13,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:13,2022-11-28 17:00:18,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:18,2022-11-28 17:00:18,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:18,2022-11-28 17:00:25,6.529s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.718s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.001s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:19,2022-11-28 17:00:19,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:19,2022-11-28 17:00:24,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:24,2022-11-28 17:00:25,0.113s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:25,2022-11-28 17:00:31,6.613s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:25,2022-11-28 17:00:25,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:25,2022-11-28 17:00:26,0.786s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.001s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:26,2022-11-28 17:00:26,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:26,2022-11-28 17:00:31,5.012s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.127s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:31,2022-11-28 17:00:31,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:31,2022-11-28 17:00:38,6.502s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:32,2022-11-28 17:00:32,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:32,2022-11-28 17:00:33,0.710s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.001s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:33,2022-11-28 17:00:33,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:33,2022-11-28 17:00:38,5.008s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:38,2022-11-28 17:00:38,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:38,2022-11-28 17:00:44,6.562s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.730s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:39,2022-11-28 17:00:39,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:39,2022-11-28 17:00:44,5.000s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:44,2022-11-28 17:00:44,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:45,2022-11-28 17:00:51,6.521s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:45,2022-11-28 17:00:45,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:45,2022-11-28 17:00:46,0.720s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:46,2022-11-28 17:00:46,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:46,2022-11-28 17:00:51,5.006s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.093s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.001s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:51,2022-11-28 17:00:51,0.012s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:51,2022-11-28 17:00:58,6.551s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:52,2022-11-28 17:00:52,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:52,2022-11-28 17:00:53,0.715s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.002s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:53,2022-11-28 17:00:53,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:53,2022-11-28 17:00:58,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:00:58,2022-11-28 17:01:04,6.617s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:00:58,2022-11-28 17:00:58,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:00:58,2022-11-28 17:00:59,0.786s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:00:59,2022-11-28 17:00:59,0.000s,PASSED
+delay(5),,,,2022-11-28 17:00:59,2022-11-28 17:01:04,5.001s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.143s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:04,2022-11-28 17:01:04,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:04,2022-11-28 17:01:11,6.494s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:05,2022-11-28 17:01:05,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:05,2022-11-28 17:01:06,0.711s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:06,2022-11-28 17:01:06,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:06,2022-11-28 17:01:11,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:11,2022-11-28 17:01:11,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:11,2022-11-28 17:01:17,6.493s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.688s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:12,2022-11-28 17:01:12,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:12,2022-11-28 17:01:17,5.003s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.098s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:17,2022-11-28 17:01:17,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:18,2022-11-28 17:01:24,6.451s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:18,2022-11-28 17:01:18,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:18,2022-11-28 17:01:19,0.693s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:19,2022-11-28 17:01:19,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:19,2022-11-28 17:01:24,5.006s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:24,2022-11-28 17:01:24,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:24,2022-11-28 17:01:31,6.497s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.697s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:25,2022-11-28 17:01:25,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:25,2022-11-28 17:01:30,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:30,2022-11-28 17:01:31,0.113s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:31,2022-11-28 17:01:37,6.760s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:31,2022-11-28 17:01:31,0.001s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:31,2022-11-28 17:01:32,0.785s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:32,2022-11-28 17:01:32,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:32,2022-11-28 17:01:37,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.206s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:37,2022-11-28 17:01:37,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:38,2022-11-28 17:01:44,6.505s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:38,2022-11-28 17:01:38,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:38,2022-11-28 17:01:39,0.737s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:39,2022-11-28 17:01:39,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:39,2022-11-28 17:01:44,5.016s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:44,2022-11-28 17:01:44,0.000s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:44,2022-11-28 17:01:51,6.494s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.698s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.001s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:45,2022-11-28 17:01:45,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:45,2022-11-28 17:01:50,5.012s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:50,2022-11-28 17:01:51,0.080s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:51,2022-11-28 17:01:57,6.492s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:51,2022-11-28 17:01:51,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:51,2022-11-28 17:01:52,0.709s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.001s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:52,2022-11-28 17:01:52,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:52,2022-11-28 17:01:57,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:01:57,2022-11-28 17:01:57,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:01:57,2022-11-28 17:02:04,6.515s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:01:58,2022-11-28 17:01:58,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:01:58,2022-11-28 17:01:59,0.698s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.001s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:01:59,2022-11-28 17:01:59,0.000s,PASSED
+delay(5),,,,2022-11-28 17:01:59,2022-11-28 17:02:04,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.016s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:04,2022-11-28 17:02:10,6.581s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:04,2022-11-28 17:02:04,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:04,2022-11-28 17:02:05,0.768s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.001s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:05,2022-11-28 17:02:05,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:05,2022-11-28 17:02:10,5.011s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.094s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:10,2022-11-28 17:02:10,0.018s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:10,2022-11-28 17:02:18,7.796s,PASSED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:11,2022-11-28 17:02:11,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:11,2022-11-28 17:02:13,1.950s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:13,2022-11-28 17:02:13,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:13,2022-11-28 17:02:18,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.080s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:18,2022-11-28 17:02:18,0.015s,PASSED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:18,2022-11-28 17:02:25,6.524s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:19,2022-11-28 17:02:19,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:19,2022-11-28 17:02:20,0.724s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:20,2022-11-28 17:02:20,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:20,2022-11-28 17:02:25,5.001s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.080s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:25,2022-11-28 17:02:25,0.032s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:25,2022-11-28 17:02:31,6.619s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.758s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:26,2022-11-28 17:02:26,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:26,2022-11-28 17:02:31,5.005s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.112s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:31,2022-11-28 17:02:31,0.025s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:32,2022-11-28 17:02:38,6.569s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:32,2022-11-28 17:02:32,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:32,2022-11-28 17:02:33,0.760s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.001s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:33,2022-11-28 17:02:33,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:33,2022-11-28 17:02:38,5.007s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.080s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:38,2022-11-28 17:02:38,0.012s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:38,2022-11-28 17:02:45,6.713s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:39,2022-11-28 17:02:39,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:39,2022-11-28 17:02:40,0.813s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.002s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:40,2022-11-28 17:02:40,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:40,2022-11-28 17:02:45,5.004s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.097s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.007s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:45,2022-11-28 17:02:45,0.014s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:45,2022-11-28 17:02:52,6.681s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.798s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.002s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:46,2022-11-28 17:02:46,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:46,2022-11-28 17:02:51,5.016s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:51,2022-11-28 17:02:52,0.093s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.018s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:52,2022-11-28 17:02:58,6.644s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:52,2022-11-28 17:02:52,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:52,2022-11-28 17:02:53,0.784s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:02:53,2022-11-28 17:02:53,0.000s,PASSED
+delay(5),,,,2022-11-28 17:02:53,2022-11-28 17:02:58,5.010s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.082s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:02:58,2022-11-28 17:02:58,0.021s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:02:58,2022-11-28 17:03:05,6.560s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:02:59,2022-11-28 17:02:59,0.015s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:02:59,2022-11-28 17:03:00,0.720s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.001s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:00,2022-11-28 17:03:00,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:00,2022-11-28 17:03:05,5.012s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:05,2022-11-28 17:03:05,0.027s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:05,2022-11-28 17:03:12,6.597s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.771s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:06,2022-11-28 17:03:06,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:06,2022-11-28 17:03:11,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:11,2022-11-28 17:03:12,0.097s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.016s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:12,2022-11-28 17:03:18,6.548s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:12,2022-11-28 17:03:12,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:12,2022-11-28 17:03:13,0.730s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.001s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.001s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:13,2022-11-28 17:03:13,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:13,2022-11-28 17:03:18,5.005s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.080s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:18,2022-11-28 17:03:18,0.027s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:18,2022-11-28 17:03:25,6.860s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:19,2022-11-28 17:03:19,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:19,2022-11-28 17:03:20,1.018s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:20,2022-11-28 17:03:20,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:20,2022-11-28 17:03:25,5.003s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:25,2022-11-28 17:03:25,0.023s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:25,2022-11-28 17:03:32,6.929s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:26,2022-11-28 17:03:26,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:26,2022-11-28 17:03:27,0.896s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.001s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:27,2022-11-28 17:03:27,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:27,2022-11-28 17:03:32,5.008s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.267s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.006s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:32,2022-11-28 17:03:32,0.012s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:32,2022-11-28 17:03:39,6.688s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:33,2022-11-28 17:03:33,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:33,2022-11-28 17:03:34,0.782s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:34,2022-11-28 17:03:34,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:34,2022-11-28 17:03:39,5.004s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.095s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:39,2022-11-28 17:03:39,0.019s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:39,2022-11-28 17:03:46,6.832s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:40,2022-11-28 17:03:40,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:40,2022-11-28 17:03:41,0.867s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:41,2022-11-28 17:03:41,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:41,2022-11-28 17:03:46,5.015s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.095s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.020s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:46,2022-11-28 17:03:53,6.945s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:46,2022-11-28 17:03:46,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:46,2022-11-28 17:03:47,0.798s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:47,2022-11-28 17:03:47,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:47,2022-11-28 17:03:52,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:03:52,2022-11-28 17:03:53,0.346s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.021s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:03:53,2022-11-28 17:04:00,6.922s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:03:53,2022-11-28 17:03:53,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:03:53,2022-11-28 17:03:55,1.036s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.001s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:03:55,2022-11-28 17:03:55,0.000s,PASSED
+delay(5),,,,2022-11-28 17:03:55,2022-11-28 17:04:00,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.083s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.024s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:00,2022-11-28 17:04:06,6.583s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:00,2022-11-28 17:04:00,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:00,2022-11-28 17:04:01,0.742s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:01,2022-11-28 17:04:01,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:01,2022-11-28 17:04:06,5.011s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.102s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:06,2022-11-28 17:04:06,0.022s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:06,2022-11-28 17:04:13,7.073s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:07,2022-11-28 17:04:07,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:07,2022-11-28 17:04:08,1.214s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:08,2022-11-28 17:04:08,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:08,2022-11-28 17:04:13,5.012s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.086s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:13,2022-11-28 17:04:13,0.022s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:13,2022-11-28 17:04:20,6.624s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:14,2022-11-28 17:04:14,0.001s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:14,2022-11-28 17:04:15,0.767s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:15,2022-11-28 17:04:15,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:15,2022-11-28 17:04:20,5.003s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.081s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:20,2022-11-28 17:04:20,0.026s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:20,2022-11-28 17:04:27,7.021s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:21,2022-11-28 17:04:21,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:21,2022-11-28 17:04:22,1.179s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:22,2022-11-28 17:04:22,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:22,2022-11-28 17:04:27,5.002s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.106s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:27,2022-11-28 17:04:27,0.015s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:27,2022-11-28 17:04:34,6.771s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:28,2022-11-28 17:04:28,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:28,2022-11-28 17:04:29,0.831s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:29,2022-11-28 17:04:29,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:29,2022-11-28 17:04:34,5.002s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.097s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:34,2022-11-28 17:04:34,0.018s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:34,2022-11-28 17:04:41,6.594s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:35,2022-11-28 17:04:35,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:35,2022-11-28 17:04:36,0.737s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.001s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.001s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:36,2022-11-28 17:04:36,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:36,2022-11-28 17:04:41,5.008s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.093s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.017s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:41,2022-11-28 17:04:47,6.784s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:41,2022-11-28 17:04:41,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:41,2022-11-28 17:04:42,0.857s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.002s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:42,2022-11-28 17:04:42,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:42,2022-11-28 17:04:47,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.127s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:47,2022-11-28 17:04:47,0.026s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:48,2022-11-28 17:04:54,6.596s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:48,2022-11-28 17:04:48,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:48,2022-11-28 17:04:49,0.755s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:49,2022-11-28 17:04:49,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:49,2022-11-28 17:04:54,5.005s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:04:54,2022-11-28 17:04:54,0.019s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:04:54,2022-11-28 17:05:01,6.660s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:04:55,2022-11-28 17:04:55,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:04:55,2022-11-28 17:04:56,0.788s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.001s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:04:56,2022-11-28 17:04:56,0.000s,PASSED
+delay(5),,,,2022-11-28 17:04:56,2022-11-28 17:05:01,5.006s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:05:01,2022-11-28 17:05:01,0.021s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:05:01,2022-11-28 17:05:08,6.779s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:05:02,2022-11-28 17:05:02,0.001s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:05:02,2022-11-28 17:05:03,0.813s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:05:03,2022-11-28 17:05:03,0.000s,PASSED
+delay(5),,,,2022-11-28 17:05:03,2022-11-28 17:05:08,5.004s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.084s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:05:08,2022-11-28 17:05:08,0.028s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:05:08,2022-11-28 17:05:14,6.765s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.783s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.001s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:05:09,2022-11-28 17:05:09,0.000s,PASSED
+delay(5),,,,2022-11-28 17:05:09,2022-11-28 17:05:14,5.009s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.112s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:05:14,2022-11-28 17:05:14,0.024s,FAILED
+,,,,,,,
+Test Cases/Engine_Scoring/Engine Scoring,,,,2022-11-28 17:05:15,2022-11-28 17:05:21,6.771s,FAILED
+"markPassed(""Variasi data ke : "" + no)",,,,2022-11-28 17:05:15,2022-11-28 17:05:15,0.000s,PASSED
+"req_data = sendRequest(findTestObject(""Search_ME"", [""MID"":MID, ""source"":source, ""ip"":ip, ""userid"":userid, ""branch"":branch, ""tipekons"":tipekons, ""marital"":marital, ""penjamin"":penjamin, ... ]))",,data ME for scoring request,,2022-11-28 17:05:15,2022-11-28 17:05:16,0.885s,PASSED
+slurper = new groovy.json.JsonSlurper(),,store json response to variable,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+result = slurper.parseText(req_data.getResponseBodyContent()),,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+reqid_kons = requestid1,,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+reqid_spouse = requestid2,,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+"println(""requestid kons : "" + reqid_kons)",,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+response_searchME_kons = reqid_kons,,store var to global variable,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+response_searchME_spouse = reqid_spouse,,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+"println(""kons req id is :"" + response_searchME_kons)",,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+"println(""spouse req id is : "" + response_searchME_spouse)",,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+"verifyResponseStatusCode(req_data, 200)",,verify response status code,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+response = req_data.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+logInfo($response),,,,2022-11-28 17:05:16,2022-11-28 17:05:16,0.000s,PASSED
+delay(5),,,,2022-11-28 17:05:16,2022-11-28 17:05:21,5.014s,PASSED
+"scoring = sendRequest(findTestObject(""EngineScore"", [""response_searchME_kons"":response_searchME_kons, ""response_searchME_spouse"":response_searchME_spouse]))",,Engine Scoring - inquiry scoring result from req_id,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.096s,PASSED
+"verifyResponseStatusCode(scoring, 200)",,verify response status code,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.000s,PASSED
+response2 = scoring.getResponseText(),,show response to report in test suite,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.000s,PASSED
+"markPassed(""result service data ke : "" + no)",,,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.000s,PASSED
+logInfo($response2),,,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.000s,PASSED
+"verifyElementPropertyValue(scoring, ""Final_result"", final_result)",,verify final result scoring,,2022-11-28 17:05:21,2022-11-28 17:05:21,0.023s,FAILED
