@@ -1,0 +1,125 @@
+192.168.29.193 | AksesAPI | result_bscore
+
+update Result_Bscore set timeinput = '2021-11-11 19:56:45.380' where Parameter in (
+'3174054304810005',
+'3175075106820021',
+'1871072210750001',
+'3316052903840001',
+'3376022211730003',
+'3523050102720004',
+'1111134102660001',
+'1271024311620001',
+'3174095901961002',
+'6171011511790007'
+)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+matrik 15 ( data watchlist )
+- setting sentral param as matrik 14
+- cek search data dengan nik salah nama + dob benar / 
+
+
+192.168.29.193 | AksesAPI |[dbo].[Result_Bscore] 
+
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode)
+values('1871072210755555','B',9999,getdate(),200,'')
+
+192.168.29.193 | AksesAPI |[dbo].[log_pefindo] 
+
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status)
+values ('195777','Anto','1992-04-20','1871072210755555',getdate(),'800','1')
+
+-------------------------------------------------------------------------------------------------------------
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820001','A',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820002','B',9999,getdate(),200,'')
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820003','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820004','D',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820005','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820006','Z',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820016','A',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820017','B',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820018','B',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820019','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820020','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820021','D',9999,getdate(),200,'')
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820022','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820023','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820024','Z',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820025','A',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820026','B',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820027','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820028','D',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820029','X',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820030','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820031','Z',9999,getdate(),200,'')
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820035','A',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820036','B',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820037','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820038','D',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820039','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3111075106820040','Z',9999,getdate(),200,'')
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195778','ANDHIKA UTOMO','1992-07-07','3111075106820007',getdate(),'0','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195779','LARASATI','1992-08-08','3111075106820008',getdate(),'300','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195780','FREDY MULIONO','1992-09-09','3111075106820009',getdate(),'499','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195781','MAGHDALENA NENO','1992-12-12','3111075106820010',getdate(),'500','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195782','ERNESTO CARVALHO','1993-01-01','3111075106820011',getdate(),'600','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195783','STEVANUS ANTO','1993-02-02','3111075106820012',getdate(),'699','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195784','DODI RAMDHANI','1993-03-03','3111075106820013',getdate(),'700','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195785','GUNTORO','1993-04-04','3111075106820014',getdate(),'800','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195786','MICKO PUTERA','1993-05-05','3111075106820015',getdate(),'1000','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195787','EDWIN PASARIBU','1993-06-06','3111075106820016',getdate(),'200','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195788','HARRY SULISTIO','1993-07-07','3111075106820017',getdate(),'600','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195789','HENDRY TIRTA','1993-08-08','3111075106820018',getdate(),'800','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195790','DARA AYU','1993-09-09','3111075106820019',getdate(),'300','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195791','MEGARANI MUTIARA','1993-10-10','3111075106820020',getdate(),'550','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195792','SEPTI INDRI','1993-11-11','3111075106820021',getdate(),'550','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195793','DIAN LINGGA','1993-12-12','3111075106820022',getdate(),'300','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195794','WINDY PUTRI','1994-01-01','3111075106820023',getdate(),'550','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195795','LAURENCIA GIOVANNI','1994-02-02','3111075106820024',getdate(),'750','1')
+
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195796','RENDY ADITYA','1994-10-10','3111075106820032',getdate(),'200','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195797','RISKA INDAH','1994-11-11','3111075106820033',getdate(),'600','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195798','IVAN WILLIAM','1994-12-12','3111075106820034',getdate(),'800','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195799','MUHAMMAD ARKHA','1995-01-01','3111075106820035',getdate(),'800','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195800','FAJAR WIJAYA','1995-02-02','3111075106820036',getdate(),'650','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195801','JOKO SULISTIYO','1995-03-03','3111075106820037',getdate(),'200','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195802','MUHAMMAD ISA','1995-04-04','3111075106820038',getdate(),'100','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195803','HADI PURNOMO','1995-05-05','3111075106820039',getdate(),'700','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195804','FELICIA GONDAWIJAYA','1995-65-06','3111075106820040',getdate(),'500','1')
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3311013112620025','A',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('0953052908680286','B',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('1271121708760010','C',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3516084506640006','D',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('3325154805850002','Y',9999,getdate(),200,'')
+insert into Result_Bscore (Parameter,Result,Log_AksesAPIID,timeinput,statusCode,ErrorCode) values('0954035006818541','Z',9999,getdate(),200,'')
+
+
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195804','ROHMAD BASUKI WAGIMAN','1962-12-21','3311013112620025',getdate(),'800','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195805','AHMAD YANI','1968-08-29','0953052908680286',getdate(),'650','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195806','MOHAMMAD ABDUL YUSUF','1976-08-19','0953052908680286',getdate(),'200','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195807','KAYATI','1964-06-05','3516084506640006',getdate(),'100','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195808','SITI ROHAYATI','1985-05-08','3325154805850002',getdate(),'700','1')
+insert into log_pefindo(pefindo_ID,FullName,dob,NO_KTP,timeinput,Value,status) values ('195809','DENITA ULFA','1981-06-10','0954035006818541',getdate(),'500','1')
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+192.168.29.126 | bcafblacklist | BlacklistInternal
+
+
+
+tanya list project middleware, buat di otmasi.
+untuk aprova
+-- service untuk submit data aprova - printing sisanya manual
+-- explore tools refers opsi 1

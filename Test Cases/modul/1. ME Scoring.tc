@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>1. ME Scoring</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f59596de-1849-4900-b1c2-f1581b1782ef</testCaseGuid>
+   <variable>
+      <defaultValue>'1211456'</defaultValue>
+      <description></description>
+      <id>4385d0a9-6619-47b2-8ef5-51b7c900e2a2</id>
+      <masked>false</masked>
+      <name>Dataid</name>
+   </variable>
+   <variable>
+      <defaultValue>'ME'</defaultValue>
+      <description></description>
+      <id>cd3a36fc-d117-4826-a178-de78359e2720</id>
+      <masked>false</masked>
+      <name>Source</name>
+   </variable>
+   <variable>
+      <defaultValue>'White'</defaultValue>
+      <description></description>
+      <id>6c4a6b8c-e7e1-4765-98f4-7d0d34a40286</id>
+      <masked>false</masked>
+      <name>Result</name>
+   </variable>
+</TestCaseEntity>

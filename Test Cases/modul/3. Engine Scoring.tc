@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>3. Engine Scoring</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9b2add4f-5e2c-4591-a62d-aa69baf84020</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.response_searchME_kons</defaultValue>
+      <description></description>
+      <id>9446f920-9464-4460-bf0f-21ee1c8ab0a2</id>
+      <masked>false</masked>
+      <name>response_searchME_kons</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.response_searchME_spouse</defaultValue>
+      <description></description>
+      <id>9b2e927d-f902-4754-9b8f-4eade1bb8c65</id>
+      <masked>false</masked>
+      <name>response_searchME_spouse</name>
+   </variable>
+   <variable>
+      <defaultValue>'Reguler'</defaultValue>
+      <description></description>
+      <id>e67f8714-7dc4-4c44-b163-9ab6a412e3a8</id>
+      <masked>false</masked>
+      <name>final_result</name>
+   </variable>
+</TestCaseEntity>

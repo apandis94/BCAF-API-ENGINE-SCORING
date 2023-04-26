@@ -1,0 +1,74 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+ins_insurance = WS.sendRequest(findTestObject('Sprint 4/API/InsertInsurance_PS', [('mid') : i_mid, ('yearid') : i_yearid
+            , ('rscc') : i_rscc, ('rsmb') : i_rsmb, ('tjh') : i_tjh, ('ins_deduc_stat') : i_ins_deduc_stat, ('ins_deduc_percent') : i_ins_deduc_percent
+            , ('ins_deduc') : i_ins_deduc, ('ins_payment') : i_ins_payment]))
+
+'verify response status code api insert insurance ME'
+WS.verifyResponseStatusCode(ins_insurance, 200)
+
+calculate_ME = WS.sendRequest(findTestObject('Sprint 4/API/Kalkulasi_PS', [('mid') : i_mid, ('merk') : c_merk, ('model') : c_model
+            , ('type') : c_type, ('tujuan') : c_tujuan, ('thnkendaraan') : c_thnkendaraan, ('packet') : c_packet, ('otr') : c_otr
+            , ('dp_percent') : c_dp_percent, ('adm_fee') : c_adm_fee, ('residual') : c_residual, ('tenor') : c_tenor, ('flat_rate') : c_flat_rate
+            , ('eff_rate') : c_eff_rate, ('life_ins_branch') : c_life_ins_branch, ('life_ins_company') : c_life_ins_company
+            , ('car_ins_branch') : c_car_ins_branch, ('life_ins_company') : c_life_ins_company, ('provisi_fee') : c_provisi_fee
+            , ('adm_fee_combo') : c_adm_fee_combo, ('provisi_fee_combo') : c_provisi_fee_combo, ('carins_fee_combo') : c_carins_fee_combo
+            , ('lifeins_fee_combo') : c_lifeins_fee_combo, ('lifeins_combo') : c_lifeins_combo]))
+
+'verify response status code api calculate ME'
+WS.verifyResponseStatusCode(calculate_ME, 200)
+
+'show response to report in test suite'
+response = calculate_ME.getResponseText()
+
+KeywordUtil.markPassed('result kalkulasi data : ' + no)
+
+KeywordUtil.logInfo("$response")
+
+'verifikasi response field jumlah pokok pinjaman'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.JumlahPokokPinjaman', t_principal)
+
+'verifikasi response field total interest'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.TotalInterest', t_total_interest)
+
+'verifikasi response field car insurance'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.TotalInsurance', t_car_ins)
+
+'verifikasi response field car insurance fee'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.AdminInsCar', t_adm_car_ins)
+
+'verifikasi response field life insurance'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.JumlahAsuransiJiwa', t_life_ins)
+
+'verifikasi response field life insurance fee'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.AdminInsLife', t_adm_life_ins)
+
+'verifikasi response field biaya proses pembiayaan'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.BiayaProses', t_biaya_proses)
+
+'verifikasi response field instalment'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.AngsuranPerbulan', t_instalment)
+
+'verifikasi response field rounded instalment'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.RoundedInstallment', t_rounded_instalment)
+
+'verifikasi response field first payment'
+WS.verifyElementPropertyValue(calculate_ME, 'GetKalkulasiResponse.NominalTransferDealer', t_first_payment)
